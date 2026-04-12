@@ -90,13 +90,13 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 min-h-[88vh] flex flex-col md:flex-row border-b border-brand-border">
-        <div className="w-full md:w-[60%] p-6 md:p-12 lg:p-24 flex flex-col justify-center border-r border-brand-border">
+      <section className="pt-20 min-h-[90vh] relative flex flex-col md:flex-row border-b border-brand-border overflow-hidden">
+        <div className="w-full md:w-[70%] p-6 md:p-12 lg:p-24 flex flex-col justify-center z-10 relative">
           <motion.h1 
             {...fadeInUp}
-            className="text-[54px] md:text-[92px] leading-[0.9] mb-8"
+            className="text-[60px] md:text-[130px] leading-[0.8] mb-8 font-display uppercase tracking-tighter"
           >
-            Skincare is<br />Performance<br />Gear.
+            SKINCARE<br />IS<br />PERFORMANCE<br />GEAR.
           </motion.h1>
           <motion.p 
             {...fadeInUp}
@@ -113,19 +113,19 @@ export default function App() {
               onClick={() => setView('quiz')}
               className="bg-brand-accent text-brand-bg px-8 py-4 font-display text-lg uppercase tracking-tight hover:brightness-110 transition-all active:scale-95 flex items-center gap-3 group"
             >
-              Get Your Gear
+              GET YOUR GEAR
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
         </div>
-        <div className="w-full md:w-[40%] bg-[#0F0F0F] relative overflow-hidden min-h-[400px] md:min-h-auto">
+        <div className="w-full md:w-[50%] h-[50vh] md:h-auto md:absolute md:right-0 md:top-20 md:bottom-0 bg-[#0F0F0F] overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?q=80&w=1000&auto=format&fit=crop" 
-            alt="Dark aesthetic product"
-            className="absolute inset-0 w-full h-full object-cover grayscale contrast-125 opacity-60"
+            src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop" 
+            alt="Product shot"
+            className="w-full h-full object-cover grayscale contrast-125 opacity-80"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent md:bg-gradient-to-l" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent md:bg-gradient-to-r" />
         </div>
       </section>
 
