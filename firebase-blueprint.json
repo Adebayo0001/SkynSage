@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Stores user quiz results and contact information for gear deployment.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "skinType": { "type": "string", "enum": ["A", "B", "C"] },
+        "environment": { "type": "string", "enum": ["A", "B", "C"] },
+        "goal": { "type": "string", "enum": ["A", "B", "C"] },
+        "assignedKit": { "type": "string" },
+        "name": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "status": { "type": "string", "enum": ["quiz_complete", "deployed"] },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "skinType", "environment", "goal", "assignedKit", "status", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/profiles/{uid}": {
+      "schema": "UserProfile",
+      "description": "User profile and gear assignment data"
+    }
+  }
+}

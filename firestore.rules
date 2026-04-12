@@ -1,0 +1,63 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: profiles
+    // Document ID: {uid} (Firebase Auth UID)
+    // Fields:
+    //   - uid: string (required) - Auth UID
+    //   - skinType: string (required, A|B|C)
+    //   - environment: string (required, A|B|C)
+    //   - goal: string (required, A|B|C)
+    //   - assignedKit: string (required)
+    //   - name: string (optional)
+    //   - whatsapp: string (optional)
+    //   - status: string (required, quiz_complete|deployed)
+    //   - timestamp: timestamp (required)
+    //
+    // ===============================================================
+
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && 
+             request.auth.token.email == "ogunlekeoluwafunmi@gmail.com" && 
+             request.auth.token.email_verified == true;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isRecent(time) {
+      return time > request.time - duration.value(5, 'm') &&
+             time <= request.time;
+    }
+
+    function isValidProfile(data) {
+      return data.keys().hasAll(['uid', 'skinType', 'environment', 'goal', 'assignedKit', 'status', 'timestamp']) &&
+             data.uid == request.auth.uid &&
+             data.skinType in ['A', 'B', 'C'] &&
+             data.environment in ['A', 'B', 'C'] &&
+             data.goal in ['A', 'B', 'C'] &&
+             data.status in ['quiz_complete', 'deployed', 'contacted', 'shipped'] &&
+             data.assignedKit is string &&
+             (!('name' in data) || (data.name is string && data.name.size() < 100)) &&
+             (!('whatsapp' in data) || (data.whatsapp is string && data.whatsapp.size() < 30));
+    }
+
+    match /profiles/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid) && isValidProfile(request.resource.data) && isRecent(request.resource.data.timestamp);
+      allow update: if (isOwner(uid) && isValidProfile(request.resource.data) && request.resource.data.uid == resource.data.uid && isRecent(request.resource.data.timestamp)) || isAdmin();
+      allow list: if isAdmin();
+    }
+  }
+}
