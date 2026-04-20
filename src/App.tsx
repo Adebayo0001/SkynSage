@@ -90,13 +90,13 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 min-h-[90vh] relative flex flex-col md:flex-row border-b border-brand-border overflow-hidden">
-        <div className="w-full md:w-[70%] p-6 md:p-12 lg:p-24 flex flex-col justify-center z-10 relative">
+      <section className="pt-20 min-h-[88vh] flex flex-col md:flex-row border-b border-brand-border">
+        <div className="w-full md:w-[60%] p-6 md:p-12 lg:p-24 flex flex-col justify-center border-r border-brand-border">
           <motion.h1 
             {...fadeInUp}
-            className="text-[60px] md:text-[130px] leading-[0.8] mb-8 font-display uppercase tracking-tighter"
+            className="text-[54px] md:text-[92px] leading-[0.9] mb-8"
           >
-            SKINCARE<br />IS<br />PERFORMANCE<br />GEAR.
+            Skincare is<br />Performance<br />Gear.
           </motion.h1>
           <motion.p 
             {...fadeInUp}
@@ -113,19 +113,19 @@ export default function App() {
               onClick={() => setView('quiz')}
               className="bg-brand-accent text-brand-bg px-8 py-4 font-display text-lg uppercase tracking-tight hover:brightness-110 transition-all active:scale-95 flex items-center gap-3 group"
             >
-              GET YOUR GEAR
+              Get Your Gear
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
         </div>
-        <div className="w-full md:w-[50%] h-[50vh] md:h-auto md:absolute md:right-0 md:top-20 md:bottom-0 bg-[#0F0F0F] overflow-hidden">
+        <div className="w-full md:w-[40%] bg-[#0F0F0F] relative overflow-hidden min-h-[400px] md:min-h-auto">
           <img 
-            src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop" 
-            alt="Product shot"
-            className="w-full h-full object-cover grayscale contrast-125 opacity-80"
+            src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?q=80&w=1000&auto=format&fit=crop" 
+            alt="Dark aesthetic product"
+            className="absolute inset-0 w-full h-full object-cover grayscale contrast-125 opacity-60"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent md:bg-gradient-to-r" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent md:bg-gradient-to-l" />
         </div>
       </section>
 
@@ -139,76 +139,6 @@ export default function App() {
               Most men quit skincare because it's confusing. We simplified it into a 30-second assessment and a one-tap restock. No fluff, just results.
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Section 3: THE DEEP PURGE (THE WASH) */}
-      <section className="min-h-[90vh] flex flex-col md:flex-row bg-[#0D0D0D] border-b border-brand-border">
-        <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-brand-border overflow-hidden relative">
-          <motion.img 
-            initial={{ scale: 1.1, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 0.8 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop" 
-            alt="Man using The Deep Purge cleanser"
-            className="w-full h-full object-cover grayscale contrast-125"
-            referrerPolicy="no-referrer"
-          />
-          {/* Subtle Electric Volt lighting effect overlay */}
-          <div className="absolute inset-0 bg-brand-accent/5 pointer-events-none" />
-        </div>
-        <div className="w-full md:w-1/2 p-8 md:p-24 flex flex-col justify-center">
-          <motion.div {...fadeInUp}>
-            <h2 className="text-5xl md:text-[72px] leading-[0.9] mb-8 font-display uppercase">START SHARP.</h2>
-            <div className="space-y-6 mb-12">
-              <p className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase">STEP 01 PURGE</p>
-              <p className="text-brand-muted text-xl md:text-2xl max-w-md leading-relaxed uppercase">
-                WASH AWAY THE CITY GRIME. CLEANSE, REFRESH, AND RESET YOUR SKIN.
-              </p>
-            </div>
-            <button 
-              onClick={() => setView('quiz')}
-              className="text-[#888888] text-xs font-bold tracking-[0.3em] uppercase hover:text-brand-accent transition-colors flex items-center gap-2 group"
-            >
-              GET YOUR GEAR
-              <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 4: THE HYDRA-SHIELD (THE OFFICE) */}
-      <section className="min-h-[90vh] flex flex-col md:flex-row bg-brand-bg border-b border-brand-border">
-        <div className="w-full md:w-1/2 p-8 md:p-24 flex flex-col justify-center order-2 md:order-1">
-          <motion.div {...fadeInUp}>
-            <h2 className="text-5xl md:text-[72px] leading-[0.9] mb-8 font-display uppercase">GET READY TO DOMINATE.</h2>
-            <div className="space-y-6 mb-12">
-              <p className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase">STEP 02 SHIELD</p>
-              <p className="text-brand-muted text-xl md:text-2xl max-w-md leading-relaxed uppercase">
-                LOCK IN MOISTURE. PROTECT YOUR FACE FROM THE DAILY HUSTLE.
-              </p>
-            </div>
-            <button 
-              onClick={() => setView('quiz')}
-              className="text-[#888888] text-xs font-bold tracking-[0.3em] uppercase hover:text-brand-accent transition-colors flex items-center gap-2 group"
-            >
-              GET YOUR GEAR
-              <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </motion.div>
-        </div>
-        <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-l border-brand-border overflow-hidden order-1 md:order-2">
-          <motion.img 
-            initial={{ scale: 1.1, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 0.8 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop" 
-            alt="Man using The Hydra-Shield moisturizer"
-            className="w-full h-full object-cover grayscale contrast-125"
-            referrerPolicy="no-referrer"
-          />
         </div>
       </section>
 
