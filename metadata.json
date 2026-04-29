@@ -1,5 +1,6 @@
 {
-  "name": "LAGOS MIDNIGHT",
+  "name": "LAGOS MIDNIGHT ORIGINAL",
   "description": "High-performance men's skincare gear engineered for the Lagos heat.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }
