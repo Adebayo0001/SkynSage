@@ -78,7 +78,7 @@ export default function App() {
     <div className="min-h-screen bg-brand-bg text-brand-text selection:bg-brand-accent selection:text-brand-bg">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 border-b border-brand-border bg-brand-bg/80 backdrop-blur-md">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+        <div className="max-w-[90rem] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
           <div className="font-display text-xl tracking-tighter uppercase">
             Lagos Midnight
           </div>
@@ -94,7 +94,7 @@ export default function App() {
         <div className="w-full md:w-[60%] p-6 md:p-12 lg:p-24 flex flex-col justify-center border-r border-brand-border">
           <motion.h1 
             {...fadeInUp}
-            className="text-[54px] md:text-[92px] leading-[0.9] mb-8"
+            className="text-[3.375rem] md:text-[5.75rem] leading-[0.9] mb-8"
           >
             Skincare is<br />Performance<br />Gear.
           </motion.h1>
@@ -118,7 +118,7 @@ export default function App() {
             </button>
           </motion.div>
         </div>
-        <div className="w-full md:w-[40%] bg-[#0F0F0F] relative overflow-hidden min-h-[400px] md:min-h-auto">
+        <div className="w-full md:w-[40%] bg-[#0F0F0F] relative overflow-hidden min-h-[25rem] md:min-h-auto">
           <img 
             src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?q=80&w=1000&auto=format&fit=crop" 
             alt="Dark aesthetic product"
@@ -130,8 +130,8 @@ export default function App() {
       </section>
 
       {/* The Philosophy */}
-      <section className="py-32 md:py-[120px] px-6 border-b border-brand-border">
-        <div className="max-w-[700px] mx-auto text-center md:text-left">
+      <section className="py-32 md:py-[7.5rem] px-6 border-b border-brand-border">
+        <div className="max-w-[43.75rem] mx-auto text-center md:text-left">
           <motion.div {...fadeInUp}>
             <span className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Philosophy</span>
             <h2 className="text-4xl md:text-6xl mb-8">Zero Friction.</h2>
@@ -164,7 +164,7 @@ export default function App() {
             </p>
             <div className="flex flex-wrap gap-4">
               {['CLEANSE', 'HYDRATE', 'PROTECT'].map((tool) => (
-                <div key={tool} className="border border-brand-border px-4 py-2 text-[10px] font-bold tracking-widest text-brand-muted">
+                <div key={tool} className="border border-brand-border px-4 py-2 text-[0.625rem] font-bold tracking-widest text-brand-muted">
                   {tool}
                 </div>
               ))}
@@ -248,7 +248,7 @@ export default function App() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-[1200px] text-center"
         >
-          <h2 className="text-5xl md:text-[100px] leading-[0.9] tracking-tighter">
+          <h2 className="text-5xl md:text-[6.25rem] leading-[0.9] tracking-tighter">
             TESTED ON THE<br />THIRD MAINLAND.<br />REFINED IN LEKKI.<br />BUILT FOR THE HUSTLE.
           </h2>
         </motion.div>
@@ -271,7 +271,7 @@ export default function App() {
       {/* Section 6: The Routine (The 1-2-3) */}
       <section className="min-h-[90vh] p-8 md:p-24 bg-brand-bg border-b border-brand-border">
         <motion.div {...fadeInUp} className="mb-24">
-          <h2 className="text-5xl md:text-[64px] leading-[0.9]">THREE STEPS.<br />ZERO STRESS.</h2>
+          <h2 className="text-5xl md:text-[4rem] leading-[0.9]">THREE STEPS.<br />ZERO STRESS.</h2>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
@@ -304,7 +304,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-16 px-6 md:px-12 border-t border-brand-border">
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[90rem] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
             <div className="md:col-span-2">
               <div className="font-display text-3xl mb-6">LAGOS MIDNIGHT</div>
@@ -327,10 +327,10 @@ export default function App() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-brand-border gap-4">
-            <div className="text-[10px] font-bold tracking-widest text-brand-muted uppercase">
+            <div className="text-[0.625rem] font-bold tracking-widest text-brand-muted uppercase">
               © 2026 LAGOS MIDNIGHT. ALL RIGHTS RESERVED.
             </div>
-            <div className="text-[10px] font-bold tracking-widest text-brand-accent uppercase">
+            <div className="text-[0.625rem] font-bold tracking-widest text-brand-accent uppercase">
               Designed in Lagos
             </div>
           </div>

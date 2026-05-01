@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+:root {
+  /* 
+     Base scaling: 1rem = 16px at 1440px.
+     Using a clamp ensures the UI doesn't get ridiculously small or large,
+     and the calc(0.5rem + ...) portion ensures browser zoom works appropriately.
+  */
+  font-size: clamp(12px, 0.4rem + 0.833vw, 20px);
+}
+
+@media (min-width: 1440px) {
+  :root {
+    /* Lock at 1rem = 16px exactly for 1440px and above, or keep it fluid */
+    font-size: 1.1111vw;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    /* Mobile scaling: 1rem = 16px at 375px width (approx 4.26vw) */
+    font-size: clamp(14px, 1rem + 1vw, 18px);
+  }
+}
+
 @theme {
   --font-display: "Archivo Black", sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;

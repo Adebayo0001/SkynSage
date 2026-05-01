@@ -161,7 +161,7 @@ export default function Recommendation({ answers, onReset }: RecommendationProps
 
   return (
     <div className="min-h-screen bg-brand-bg text-brand-text p-6 md:p-12 lg:p-24">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[90rem] mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -273,7 +273,7 @@ export default function Recommendation({ answers, onReset }: RecommendationProps
                   
                   <button 
                     onClick={onReset}
-                    className="text-[10px] text-brand-border hover:text-brand-muted transition-colors uppercase tracking-[0.2em]"
+                    className="text-[0.625rem] text-brand-border hover:text-brand-muted transition-colors uppercase tracking-[0.2em]"
                   >
                     [ RE-CALIBRATE SYSTEM ]
                   </button>
@@ -285,7 +285,7 @@ export default function Recommendation({ answers, onReset }: RecommendationProps
       </div>
 
       {/* Technical Background Decoration */}
-      <div className="fixed bottom-12 right-12 font-mono text-[10px] text-brand-border/30 vertical-rl rotate-180 tracking-[0.5em] pointer-events-none uppercase">
+      <div className="fixed bottom-12 right-12 font-mono text-[0.625rem] text-brand-border/30 vertical-rl rotate-180 tracking-[0.5em] pointer-events-none uppercase">
         LM_UNIT_ASSIGNED // {kit.name.replace(/ /g, "_")} // SECURE_CHECKOUT
       </div>
 
@@ -333,7 +333,7 @@ export default function Recommendation({ answers, onReset }: RecommendationProps
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
-                        <label className="block text-[10px] font-bold tracking-[0.2em] text-brand-muted uppercase mb-2">Full Name</label>
+                        <label className="block text-[0.625rem] font-bold tracking-[0.2em] text-brand-muted uppercase mb-2">Full Name</label>
                         <input 
                           required
                           type="text"
@@ -344,7 +344,7 @@ export default function Recommendation({ answers, onReset }: RecommendationProps
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] font-bold tracking-[0.2em] text-brand-muted uppercase mb-2">WhatsApp Number</label>
+                        <label className="block text-[0.625rem] font-bold tracking-[0.2em] text-brand-muted uppercase mb-2">WhatsApp Number</label>
                         <input 
                           required
                           type="tel"

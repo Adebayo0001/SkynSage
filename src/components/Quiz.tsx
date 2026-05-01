@@ -220,7 +220,7 @@ export default function Quiz({ onComplete, onClose }: QuizProps) {
                 >
                   ENGINEERING YOUR SETUP...
                 </motion.div>
-                <div className="mt-4 font-mono text-brand-muted text-[10px] uppercase tracking-widest">
+                <div className="mt-4 font-mono text-brand-muted text-[0.625rem] uppercase tracking-widest">
                   ALMOST DONE...
                 </div>
               </div>
@@ -265,10 +265,10 @@ export default function Quiz({ onComplete, onClose }: QuizProps) {
 
       {/* Technical Footer Decoration */}
       <div className="p-8 flex justify-between items-end pointer-events-none">
-        <div className="font-mono text-[10px] text-brand-border uppercase tracking-[0.2em]">
+        <div className="font-mono text-[0.625rem] text-brand-border uppercase tracking-[0.2em]">
           LM_CORE_V2.0 // CALIBRATION_MODE
         </div>
-        <div className="font-mono text-[10px] text-brand-border uppercase tracking-[0.2em]">
+        <div className="font-mono text-[0.625rem] text-brand-border uppercase tracking-[0.2em]">
           {new Date().toISOString()}
         </div>
       </div>

@@ -173,18 +173,18 @@ export default function FounderPortal() {
           </div>
           <div className="flex gap-4">
             <div className="px-4 py-2 border border-brand-border bg-brand-border/20">
-              <span className="text-[10px] text-brand-muted uppercase block mb-1">Total Leads</span>
+              <span className="text-[0.625rem] text-brand-muted uppercase block mb-1">Total Leads</span>
               <span className="text-xl font-display">{profiles.length}</span>
             </div>
             <div className="px-4 py-2 border border-brand-border bg-brand-border/20">
-              <span className="text-[10px] text-brand-muted uppercase block mb-1">Deployed</span>
+              <span className="text-[0.625rem] text-brand-muted uppercase block mb-1">Deployed</span>
               <span className="text-xl font-display">{profiles.filter(p => p.status === 'deployed').length}</span>
             </div>
           </div>
         </header>
 
         <div className="w-full overflow-x-auto border border-brand-border bg-brand-border/5">
-          <table className="w-full text-left border-collapse min-w-[1000px]">
+          <table className="w-full text-left border-collapse min-w-[62.5rem]">
             <thead>
               <tr className="border-b border-brand-border bg-brand-border/10">
                 <th className="p-6 font-display text-sm uppercase tracking-widest text-brand-muted">Name</th>
@@ -233,7 +233,7 @@ export default function FounderPortal() {
                     {profile.whatsapp && (
                       <button 
                         onClick={() => openWhatsApp(profile)}
-                        className="inline-flex items-center gap-2 bg-brand-accent text-brand-bg px-4 py-2 font-display text-[10px] uppercase tracking-widest hover:brightness-110 transition-all shadow-[0_0_15px_rgba(204,255,0,0.2)] group-hover:shadow-[0_0_25px_rgba(204,255,0,0.4)]"
+                        className="inline-flex items-center gap-2 bg-brand-accent text-brand-bg px-4 py-2 font-display text-[0.625rem] uppercase tracking-widest hover:brightness-110 transition-all shadow-[0_0_15px_rgba(204,255,0,0.2)] group-hover:shadow-[0_0_25px_rgba(204,255,0,0.4)]"
                       >
                         <MessageCircle className="w-3 h-3" />
                         Message on WhatsApp
