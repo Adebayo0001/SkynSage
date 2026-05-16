@@ -94,7 +94,7 @@ export default function App() {
         <div className="w-full md:w-[60%] p-6 md:p-12 lg:p-24 flex flex-col justify-center border-r border-brand-border">
           <motion.h1 
             {...fadeInUp}
-            className="text-[3.375rem] md:text-[5.75rem] leading-[0.9] mb-8"
+            className="text-[2.75rem] sm:text-[3.375rem] md:text-[5.75rem] leading-[0.9] mb-8"
           >
             Skincare is<br />Performance<br />Gear.
           </motion.h1>
@@ -130,12 +130,12 @@ export default function App() {
       </section>
 
       {/* The Philosophy */}
-      <section className="py-32 md:py-[7.5rem] px-6 border-b border-brand-border">
+      <section className="py-20 md:py-[7.5rem] px-6 border-b border-brand-border">
         <div className="max-w-[43.75rem] mx-auto text-center md:text-left">
           <motion.div {...fadeInUp}>
             <span className="text-brand-accent text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Philosophy</span>
-            <h2 className="text-4xl md:text-6xl mb-8">Zero Friction.</h2>
-            <p className="text-brand-muted text-xl md:text-2xl leading-relaxed">
+            <h2 className="text-[2.5rem] md:text-6xl mb-8">Zero Friction.</h2>
+            <p className="text-brand-muted text-lg md:text-2xl leading-relaxed">
               Most men quit skincare because it's confusing. We simplified it into a 30-second assessment and a one-tap restock. No fluff, just results.
             </p>
           </motion.div>
@@ -158,8 +158,8 @@ export default function App() {
         </div>
         <div className="w-full md:w-[60%] p-8 md:p-24 flex flex-col justify-center">
           <motion.div {...fadeInUp}>
-            <h2 className="text-4xl md:text-7xl mb-8">The Foundation Kit.</h2>
-            <p className="text-brand-muted text-xl md:text-2xl mb-12 max-w-xl">
+            <h2 className="text-[2.5rem] md:text-7xl mb-8">The Foundation Kit.</h2>
+            <p className="text-brand-muted text-lg md:text-2xl mb-12 max-w-xl">
               Cleanser. Moisturizer. SPF 50. The only three tools you need to dominate the day.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -174,14 +174,14 @@ export default function App() {
       </section>
 
       {/* Trust Moment */}
-      <section className="py-48 md:py-[240px] px-6 bg-brand-accent text-brand-bg overflow-hidden relative">
+      <section className="py-24 md:py-[240px] px-6 bg-brand-accent text-brand-bg overflow-hidden relative">
         <div className="max-w-[1200px] mx-auto relative z-10">
           <motion.blockquote 
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-4xl md:text-8xl font-display uppercase leading-[0.85] tracking-tighter"
+            className="text-[2.5rem] md:text-8xl font-display uppercase leading-[0.85] tracking-tighter"
           >
             "Lagos doesn't sleep. Your skin shouldn't look like it."
           </motion.blockquote>
@@ -215,7 +215,7 @@ export default function App() {
         </div>
         <div className="w-full md:w-1/2 p-8 md:p-24 flex flex-col justify-center bg-brand-bg">
           <motion.div {...fadeInUp}>
-            <h2 className="text-5xl md:text-8xl leading-[0.9] mb-16">ENGINEERED<br />FOR THE HEAT.</h2>
+            <h2 className="text-[2.5rem] md:text-8xl leading-[0.9] mb-16">ENGINEERED<br />FOR THE HEAT.</h2>
             <div className="space-y-12 mb-16">
               {[
                 { title: "CARBON", desc: "Pulls the Lagos dust out of your pores." },
@@ -248,7 +248,7 @@ export default function App() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-[1200px] text-center"
         >
-          <h2 className="text-5xl md:text-[6.25rem] leading-[0.9] tracking-tighter">
+          <h2 className="text-[2.5rem] md:text-[6.25rem] leading-[0.9] tracking-tighter">
             TESTED ON THE<br />THIRD MAINLAND.<br />REFINED IN LEKKI.<br />BUILT FOR THE HUSTLE.
           </h2>
         </motion.div>
@@ -271,7 +271,7 @@ export default function App() {
       {/* Section 6: The Routine (The 1-2-3) */}
       <section className="min-h-[90vh] p-8 md:p-24 bg-brand-bg border-b border-brand-border">
         <motion.div {...fadeInUp} className="mb-24">
-          <h2 className="text-5xl md:text-[4rem] leading-[0.9]">THREE STEPS.<br />ZERO STRESS.</h2>
+          <h2 className="text-[2.5rem] md:text-[4rem] leading-[0.9]">THREE STEPS.<br />ZERO STRESS.</h2>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
@@ -287,7 +287,7 @@ export default function App() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2, duration: 0.6 }}
             >
-              <div className="text-brand-accent text-7xl md:text-9xl font-display leading-none mb-8">{item.num}</div>
+              <div className="text-brand-accent text-6xl md:text-9xl font-display leading-none mb-8">{item.num}</div>
               <h3 className="text-2xl font-display mb-4">{item.title}</h3>
               <p className="text-brand-muted text-lg leading-relaxed max-w-xs mb-8">{item.desc}</p>
               <button 

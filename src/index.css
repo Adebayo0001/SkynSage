@@ -3,24 +3,23 @@
 
 :root {
   /* 
-     Base scaling: 1rem = 16px at 1440px.
-     Using a clamp ensures the UI doesn't get ridiculously small or large,
-     and the calc(0.5rem + ...) portion ensures browser zoom works appropriately.
+     Fluid Typography with sensible bounds.
+     On Desktop (1440px): 1rem = 16px (1.111vw)
+     On Mobile (375px): 1rem = 14px (approx 3.73vw)
   */
-  font-size: clamp(12px, 0.4rem + 0.833vw, 20px);
+  font-size: clamp(14px, 0.8rem + 0.5vw, 20px);
 }
 
 @media (min-width: 1440px) {
   :root {
-    /* Lock at 1rem = 16px exactly for 1440px and above, or keep it fluid */
     font-size: 1.1111vw;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    /* Mobile scaling: 1rem = 16px at 375px width (approx 4.26vw) */
-    font-size: clamp(14px, 1rem + 1vw, 18px);
+    /* Scale down slightly on mobile to ensure big rem-based elements fit */
+    font-size: clamp(13px, 0.9rem + 1vw, 16px);
   }
 }
 

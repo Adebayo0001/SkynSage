@@ -183,8 +183,9 @@ export default function FounderPortal() {
           </div>
         </header>
 
-        <div className="w-full overflow-x-auto border border-brand-border bg-brand-border/5">
-          <table className="w-full text-left border-collapse min-w-[62.5rem]">
+        <div className="w-full overflow-x-auto border border-brand-border bg-brand-border/5 mb-12">
+          <div className="min-w-[75rem]">
+            <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-brand-border bg-brand-border/10">
                 <th className="p-6 font-display text-sm uppercase tracking-widest text-brand-muted">Name</th>
@@ -247,5 +248,6 @@ export default function FounderPortal() {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }

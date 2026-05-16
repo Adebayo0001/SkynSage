@@ -167,10 +167,10 @@ export default function Recommendation({ answers, onReset }: RecommendationProps
           animate={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
-          <span className="text-brand-muted font-display text-sm md:text-base tracking-[0.4em] uppercase mb-4 block">
+          <span className="text-brand-muted font-display text-xs md:text-base tracking-[0.4em] uppercase mb-4 block">
             HERE IS YOUR GEAR.
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl leading-none max-w-4xl">
+          <h1 className="text-[2.75rem] md:text-7xl lg:text-8xl leading-none max-w-4xl">
             {kit.name}
           </h1>
         </motion.div>
@@ -229,8 +229,8 @@ export default function Recommendation({ answers, onReset }: RecommendationProps
               </div>
 
               <div className="flex items-baseline gap-4">
-                <span className="text-brand-muted text-xs font-bold tracking-widest uppercase">Investment:</span>
-                <span className="text-4xl md:text-5xl font-display">{kit.price}</span>
+                <span className="text-brand-muted text-[0.625rem] font-bold tracking-widest uppercase">Investment:</span>
+                <span className="text-3xl md:text-5xl font-display">{kit.price}</span>
               </div>
 
               <div className="space-y-4">

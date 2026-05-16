@@ -192,11 +192,11 @@ export default function Quiz({ onComplete, onClose }: QuizProps) {
           >
             {currentStep.type === "splash" ? (
               <div className="text-center">
-                <h1 className="text-5xl md:text-8xl mb-6 leading-none">{currentStep.headline}</h1>
-                <p className="text-brand-muted text-xl mb-12">{currentStep.subtext}</p>
+                <h1 className="text-[2.75rem] sm:text-5xl md:text-8xl mb-6 leading-none">{currentStep.headline}</h1>
+                <p className="text-brand-muted text-lg md:text-xl mb-12">{currentStep.subtext}</p>
                 <button 
                   onClick={() => setCurrentStepIndex(1)}
-                  className="bg-brand-accent text-brand-bg px-12 py-6 font-display text-xl uppercase tracking-tight hover:brightness-110 transition-all active:scale-95"
+                  className="bg-brand-accent text-brand-bg px-12 py-6 font-display text-lg md:text-xl uppercase tracking-tight hover:brightness-110 transition-all active:scale-95"
                 >
                   {currentStep.button}
                 </button>
@@ -226,10 +226,10 @@ export default function Quiz({ onComplete, onClose }: QuizProps) {
               </div>
             ) : (
               <div className="flex flex-col items-center">
-                <h2 className="text-3xl md:text-6xl text-center mb-16 max-w-3xl leading-tight">
+                <h2 className="text-[2rem] sm:text-3xl md:text-6xl text-center mb-10 md:mb-16 max-w-3xl leading-tight">
                   {currentStep.question}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full">
                   {currentStep.options?.map((option) => (
                     <button
                       key={option.id}
